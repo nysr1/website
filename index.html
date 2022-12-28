@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prueba de velocidad de internet</title>
+  <style>
+    /* Estilos CSS para el diseño de la página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .result-box {
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .result-box h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .result-box p {
+      margin: 0;
+      font-size: 14px;
+    }
+    .result-box .download-speed {
+      color: #28a745;
+      font-weight: bold;
+    }
+    .result-box .upload-speed {
+      color: #dc3545;
+      font-weight: bold;
+    }
+    .result-box .ping {
+      color: #fd7e14;
+      font-weight: bold;
+    }
+    .start-button {
+      background-color: #4caf50;
+      border: none;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Prueba de velocidad de internet</h1>
+  </header>
+  <div class="container">
+    <!-- Botón para iniciar la prueba -->
+    <button class="start-button" onclick="startTest()">Iniciar prueba</button>
+    <!-- Contenedor donde se mostrarán los resultados de la prueba -->
+    <div id="result-container" class="result-box">
+      <h2>Resultados:</h2>
+      <p>Velocidad de descarga: <span class="download-speed">0</span> Mbps</p>
+      <p>Velocidad de subida: <span class="upload-speed">0</span> Mbps</p>
+      <p>Ping: <span class="ping">0</span> ms</p>
+    </div>
+  <script>
+    // Función para iniciar la prueba de velocidad de internet
+    function startTest() {
+      // Obtener los elementos de la página donde se mostrarán los resultados
+      const downloadSpeedElement = document.querySelector('.download-speed');
+      const uploadSpeedElement = document.querySelector('.upload-speed');
+      const pingElement = document.querySelector('.ping');
+
+      // Realizar la prueba de velocidad de internet
+      // (en este ejemplo se muestran valores aleatorios como resultado de la prueba)
+      downloadSpeedElement.innerHTML = Math.floor(Math.random() * 100) + ' Mbps';
+      uploadSpeedElement.innerHTML = Math.floor(Math.random() * 50) + ' Mbps';
+      pingElement.innerHTML = Math.floor(Math.random() * 100) + ' ms';
+    }
+  </script>
+</body>
+</html>
+
